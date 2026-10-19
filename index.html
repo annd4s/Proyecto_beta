@@ -1,11 +1,380 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patitas Felices - Estructura Básica</title>
+  <style>
+    /* RESET & ESTILOS BÁSICOS (LOW-FIDELITY) */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* CONTENEDORES Y BLOQUES DE RELLENO */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .placeholder-box {
+      background-color: #e0e0e0;
+      border: 2px dashed #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #667;
+      font-weight: bold;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      background-color: #ccc;
+      border: 1px solid #999;
+      cursor: pointer;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #fff;
+      border-bottom: 2px solid #ccc;
+      padding: 15px 0;
+    }
+
+    .header-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background-color: #fff;
+      padding: 40px 0;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .hero-layout {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .hero-info {
+      flex: 1;
+    }
+
+    .hero-image {
+      flex: 1;
+      height: 250px;
+    }
+
+    /* MISIÓN Y VISIÓN */
+    .mission-vision {
+      padding: 40px 0;
+    }
+
+    .cards-layout {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      flex: 1;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    /* HISTORIAS (GRID ASIMÉTRICO) */
+    .stories {
+      background-color: #fff;
+      padding: 40px 0;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .stories-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .featured-story {
+      height: 220px;
+    }
+
+    .sub-stories {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sub-story {
+      height: 65px;
+    }
+
+    /* CATÁLOGO DE ANIMALES */
+    .catalog {
+      padding: 40px 0;
+    }
+
+    .pet-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .pet-card {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .pet-image {
+      height: 120px;
+      margin-bottom: 10px;
+    }
+
+    /* PERFIL DETALLE */
+    .profile-detail {
+      background-color: #fff;
+      padding: 40px 0;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .profile-layout {
+      display: flex;
+      gap: 20px;
+    }
+
+    .profile-image {
+      flex: 1;
+      height: 200px;
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    /* CONTACTO */
+    .contact {
+      padding: 40px 0;
+    }
+
+    .contact-layout {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-form {
+      flex: 1.5;
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .input-box {
+      height: 35px;
+      width: 100%;
+    }
+
+    .textarea-box {
+      height: 80px;
+      width: 100%;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-layout {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* RESPONSIVE BÁSICO (MOBILE) */
+    @media (max-width: 768px) {
+      .hero-layout,
+      .cards-layout,
+      .stories-grid,
+      .profile-layout,
+      .contact-layout,
+      .footer-layout {
+        flex-direction: column;
+      }
+
+      .pet-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
-    
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-layout">
+      <div class="placeholder-box" style="width: 120px; height: 40px;">LOGO</div>
+      <nav>
+        <button class="btn">Boton1</button>
+        <button class="btn">Boton2</button>
+        <button class="btn">Boton3</button>
+        <button class="btn">Boton4</button>
+        <button class="btn">Boton5</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-layout">
+      <div class="hero-info">
+        <h2>[Título Principal / Slogan]</h2>
+        <p>[Texto descriptivo breve o resumen de la fundación]</p>
+        <br>
+        <button class="btn">BotonCTA1</button>
+        <button class="btn">BotonCTA2</button>
+      </div>
+      <div class="hero-image placeholder-box">
+        [Carrusel / Banner Placeholder]
+      </div>
+    </div>
+  </section>
+
+  <!-- MISIÓN Y VISIÓN -->
+  <section class="mission-vision">
+    <div class="container">
+      <h2>[Nuestro Propósito]</h2>
+      <div class="cards-layout">
+        <div class="card">
+          <h3>[Misión]</h3>
+          <p>[Texto sobre la misión de la fundación]</p>
+        </div>
+        <div class="card">
+          <h3>[Visión]</h3>
+          <p>[Texto sobre la visión a futuro]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORIAS DESTACADAS -->
+  <section class="stories">
+    <div class="container">
+      <h2>[Historias de Rescate]</h2>
+      <div class="stories-grid">
+        <div class="featured-story placeholder-box">[Foto Principal]</div>
+        <div class="sub-stories">
+          <div class="sub-story placeholder-box">[Foto Secundaria 1]</div>
+          <div class="sub-story placeholder-box">[Foto Secundaria 2]</div>
+          <div class="sub-story placeholder-box">[Foto Secundaria 3]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE ADOPCIÓN -->
+  <section class="catalog">
+    <div class="container">
+      <h2>[Animales Disponibles]</h2>
+      <div class="pet-grid">
+        <div class="pet-card">
+          <div class="pet-image placeholder-box">[Foto 1]</div>
+          <h4>[Nombre 1]</h4>
+          <p>[Info corta]</p>
+          <button class="btn">BotonVer</button>
+        </div>
+        <div class="pet-card">
+          <div class="pet-image placeholder-box">[Foto 2]</div>
+          <h4>[Nombre 2]</h4>
+          <p>[Info corta]</p>
+          <button class="btn">BotonVer</button>
+        </div>
+        <div class="pet-card">
+          <div class="pet-image placeholder-box">[Foto 3]</div>
+          <h4>[Nombre 3]</h4>
+          <p>[Info corta]</p>
+          <button class="btn">BotonVer</button>
+        </div>
+        <div class="pet-card">
+          <div class="pet-image placeholder-box">[Foto 4]</div>
+          <h4>[Nombre 4]</h4>
+          <p>[Info corta]</p>
+          <button class="btn">BotonVer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETALLE DE PERFIL -->
+  <section class="profile-detail">
+    <div class="container profile-layout">
+      <div class="profile-image placeholder-box">[Foto Grande Animal]</div>
+      <div class="profile-info">
+        <h2>[Perfil Detallado]</h2>
+        <p>[Descripción completa e historia del animal]</p>
+        <br>
+        <button class="btn">BotonSolicitar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO -->
+  <section class="contact">
+    <div class="container contact-layout">
+      <div class="contact-info">
+        <h2>[Contacto]</h2>
+        <p>[Información de contacto directo o redes sociales]</p>
+      </div>
+      <div class="contact-form">
+        <div class="input-box placeholder-box">[Campo Nombre]</div>
+        <div class="input-box placeholder-box">[Campo Correo]</div>
+        <div class="input-box placeholder-box">[Campo Tipo Consulta]</div>
+        <div class="textarea-box placeholder-box">[Campo Mensaje]</div>
+        <button class="btn">BotonEnviar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-layout">
+      <div>[Nombre Fundación]</div>
+      <div>[Copyright / Año]</div>
+      <div>[Link Desarrollador]</div>
+    </div>
+  </footer>
+
 </body>
 </html>
