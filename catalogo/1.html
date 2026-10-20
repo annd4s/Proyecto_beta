@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Perfil completo */
+.perfil-animal {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.vista-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contenedor-foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-principal {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid gray;
+    transition: transform 0.4s ease; cursor: pointer;
+}
+
+.foto-principal:hover {
+    transform: scale(1.03);
+}
+
+.bloque-informacion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detalles-tecnicos {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.historias-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Perfil - boton */
+.bloque-informacion > button > a, .mascota-relacionada > button > a {
+    text-decoration: none;
+}
+
+.bloque-informacion > button, .mascota-relacionada > button {
+    border-radius: 10px;
+    padding: 1em;
+    border: 1px solid gray;
+    transition: transform 0.4s ease;
+    align-self: flex-start;
+}
+
+.bloque-informacion > button:hover, .mascota-relacionada > button:hover { 
+    transform: scale(1.15) rotate(-2deg); 
+}
+
+/* Relacionados */
+.relacionados-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carrusel-relacionados {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.mascota-relacionada {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-width: 12rem;
+}
+
+.imagen-miniatura {
+    width: 8rem;
+    height: 9rem;
+    border-radius: 10px;
+    border: 1px solid gray;
+    object-fit: cover;
+    transition: transform 0.4s ease; cursor: pointer;
+}
+
+.imagen-miniatura:hover {
+    transform: scale(1.15) rotate(2deg);
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+    .vista-principal {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .contenedor-foto {
+        flex: 1;
+    }
+
+    .bloque-informacion {
+        flex: 1;
+    }
+}
+
+    </style>
+<body>
+    <h1>Holaaa, esta es la mascota 1</h1>
+    <div class="perfil-animal">
+
+        <div class="vista-principal">
+          <div class="contenedor-foto">
+            <img class="foto-principal" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-03.jpg" alt="Fotografía principal de Rocky">
+          </div>
+      
+          <div class="bloque-informacion">
+            <h2>Rocky</h2>
+            
+            <div class="detalles-tecnicos">
+              <p class="dato"><strong>Edad:</strong> 3 años</p>
+              <p class="dato"><strong>Sexo:</strong> Macho</p>
+              <p class="dato"><strong>Tamaño:</strong> Mediano</p>
+            </div>
+      
+            <div class="historias-perfil">
+              <div class="seccion-texto">
+                <h3>Historial de rescate</h3>
+                <p>Encontrado en una zona escolar del barrio protegiendo a los niños, esperando pacientemente una segunda oportunidad.</p>
+              </div>
+      
+              <div class="seccion-texto">
+                <h3>Estado de salud</h3>
+                <p>Vacunado, esterilizado, desparasitado y con excelente energía general.</p>
+              </div>
+      
+              <div class="seccion-texto">
+                <h3>Comportamiento</h3>
+                <p>Es un protector nato, sumamente fiel, juguetón con otros perritos y muy noble con los humanos.</p>
+              </div>
+            </div>
+      
+            <button class="boton-adopta">
+              <a href="solicitud-adopcion.html">Solicitud de Adopción</a>
+            </button>
+          </div>
+        </div>
+      
+        <div class="relacionados-seccion">
+          <h3>Otros peluditos que te pueden interesar</h3>
+          <div class="carrusel-relacionados">
+            
+            <div class="mascota-relacionada">
+              <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-06.jpg" alt="Perrita Luna">
+              <p class="nombre-miniatura">Luna</p>
+              <button class="boton-adopta">
+                <a href="2.html">Ver perfil</a>
+              </button>
+            </div>
+      
+            <div class="mascota-relacionada">
+              <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-04.jpg" alt="Perrito Toby">
+              <p class="nombre-miniatura">Toby</p>
+              <button class="boton-adopta">
+                <a href="4.html">Ver perfil</a>
+              </button>
+            </div>
+      
+            <div class="mascota-relacionada">
+              <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-05.jpg" alt="Perrito Manchitas">
+              <p class="nombre-miniatura">Manchitas</p>
+              <button class="boton-adopta">
+                <a href="5.html">Ver perfil</a>
+              </button>
+            </div>
+      
+          </div>
+        </div>
+      
+      </div>
+      
+</body>
+</html>
