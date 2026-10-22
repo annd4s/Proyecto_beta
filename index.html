@@ -1,206 +1,567 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fundación Patitas Felices - Catálogo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fundación Patitas Felices. Rescatamos, protegemos y buscamos hogares responsables para animales que necesitan una segunda oportunidad.">
+
+    <title>Patitas Felices | Una segunda oportunidad de amar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- Seccion catalogo animales disponibles -->
-  <div class="animales-disponibles">
-    <h3>Descubre a tu nuevo compañero de vida</h3>
-    <p>Buscan un rincón en tu casa y todo el espacio en tu corazón. Explora sus perfiles y haz el match perfecto.</p>
+<!-- ====================== HEADER ====================== -->
+<header class="header">
+    <a href="#inicio" class="marca">
+        <span class="marca-icono"><i class="fa-solid fa-paw"></i></span>
+        <span class="marca-texto">
+            <strong>Patitas Felices</strong>
+            <small>Fundación de protección animal</small>
+        </span>
+    </a>
+
+    <nav class="menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#catalogo">Adoptar</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a href="#catalogo" class="btn btn-coral">Adopta ahora</a>
+</header>
+
+<main>
+
+<!-- ====================== HERO (A) ====================== -->
+<section class="hero" id="inicio">
+    <div class="hero-info">
+        <span class="kicker">Juntos por el bienestar animal</span>
+        <h1>Dales una segunda oportunidad de <span>amar</span>.</h1>
+        <p>Cada animal tiene una historia y un corazón que merece otra oportunidad. Trabajamos para transformar el abandono en esperanza y encontrar familias donde nunca falte el amor.</p>
+        <div class="hero-botones">
+            <a href="#catalogo" class="btn btn-coral">
+                Adopta ahora <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#nosotros" class="btn btn-borde">Conócenos</a>
+        </div>
+    </div>
+
+    <div class="hero-imagen">
+        <div class="hero-nota">
+            <i class="fa-solid fa-heart"></i>
+            <span>Amor sin condiciones</span>
+        </div>
+    </div>
+</section>
+
+<!-- ====================== LABOR (A) ====================== -->
+<section class="labor">
+    <div class="seccion-cabeza">
+        <span class="kicker">Nuestra labor</span>
+        <h2>Pequeñas acciones que generan grandes cambios.</h2>
+    </div>
+
+    <div class="labor-grid">
+        <article class="labor-card">
+            <span class="labor-icono"><i class="fa-solid fa-house"></i></span>
+            <h3>Rescate y protección</h3>
+            <p>Acompañamos a animales en situación de vulnerabilidad y les buscamos nuevas oportunidades.</p>
+        </article>
+
+        <article class="labor-card">
+            <span class="labor-icono"><i class="fa-solid fa-stethoscope"></i></span>
+            <h3>Bienestar animal</h3>
+            <p>Promovemos la atención, el respeto y las condiciones necesarias para una vida digna.</p>
+        </article>
+
+        <article class="labor-card">
+            <span class="labor-icono"><i class="fa-solid fa-handshake"></i></span>
+            <h3>Adopción responsable</h3>
+            <p>Conectamos personas con el compromiso de adoptar y cuidar una vida para siempre.</p>
+        </article>
+    </div>
+</section>
+
+<!-- ====================== HISTORIAS / CARRUSEL (A) ====================== -->
+<section class="historias">
+    <div class="seccion-cabeza seccion-cabeza--flex">
+        <div>
+            <span class="kicker">Cada historia cuenta</span>
+            <h2>De la esperanza a un nuevo comienzo.</h2>
+        </div>
+        <p>Detrás de cada rescate hay una oportunidad para demostrar que juntos podemos hacer la diferencia.</p>
+    </div>
+
+    <div class="carrusel">
+        <div class="carrusel-pista">
+            <article class="slide slide-1">
+                <div class="slide-info">
+                    <span>Rescate</span>
+                    <h3>Todo comienza con una oportunidad.</h3>
+                    <p>Una mano amiga puede ser el principio de una historia diferente.</p>
+                </div>
+            </article>
+
+            <article class="slide slide-2">
+                <div class="slide-info">
+                    <span>Voluntariado</span>
+                    <h3>Muchas manos, una misma misión.</h3>
+                    <p>Cada gesto de solidaridad nos acerca a un mundo más compasivo.</p>
+                </div>
+            </article>
+
+            <article class="slide slide-3">
+                <div class="slide-info">
+                    <span>Adopción</span>
+                    <h3>El amor también tiene cuatro patas.</h3>
+                    <p>Una familia puede convertirse en el capítulo más bonito de una vida.</p>
+                </div>
+            </article>
+        </div>
+        <div class="carrusel-barra"><span></span></div>
+    </div>
+</section>
+
+<!-- ====================== CATÁLOGO DE ANIMALES (D) ====================== -->
+<section class="catalogo-seccion" id="catalogo">
+    <div class="seccion-cabeza seccion-cabeza--flex">
+        <div>
+            <span class="kicker">Animales disponibles</span>
+            <h2>Descubre a tu nuevo compañero de vida.</h2>
+        </div>
+        <p>Buscan un rincón en tu casa y todo el espacio en tu corazón. Explora sus perfiles y haz el match perfecto.</p>
+    </div>
 
     <div class="catalogo">
-      <div class="mascota">
-        <img class="imagen" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-01.jpg" alt="Perrito Rocky">
-        <p class="nombre">Rocky</p>
-        <p class="edad">Edad: 3 años</p>
-        <p class="tamano">Tamaño: Mediano</p>
-        <p class="raza">Raza: Mestizo</p>
-        <p class="descripcion">El guardián del barrio, juguetón y protector.</p>
-        <span class="estado disponible">Disponible</span>
-        <a href="catalogo/1.html" class="boton-adopta">Ver perfil</a>
-      </div>
 
-      <div class="mascota">
-        <img class="imagen" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-02.jpg" alt="Perrita Luna">
-        <p class="nombre">Luna</p>
-        <p class="edad">Edad: 2 años</p>
-        <p class="tamano">Tamaño: Grande</p>
-        <p class="raza">Raza: Pastor Alemán mixto</p>
-        <p class="descripcion">Tímida y dulce, siempre busca una caricia.</p>
-        <span class="estado disponible">Disponible</span>
-        <a href="catalogo/2.html" class="boton-adopta">Ver perfil</a>
-      </div>
+        <article class="mascota">
+            <div class="foto">
+                <img src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-01.jpg" alt="Perrito Rocky" loading="lazy">
+            </div>
+            <div class="mascota-cabecera">
+                <p class="nombre">Rocky</p>
+                <span class="estado disponible">Disponible</span>
+            </div>
+            <p class="meta">3 años · Mediano · Mestizo</p>
+            <p class="descripcion">El guardián del barrio, juguetón y protector.</p>
+            <a href="catalogo/1.html" class="boton-adopta">Ver perfil</a>
+        </article>
 
-      <div class="mascota">
-        <img class="imagen" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-03.jpg" alt="Perrita Piruleta">
-        <p class="nombre">Piruleta</p>
-        <p class="edad">Edad: 5 años</p>
-        <p class="tamano">Tamaño: Mediano</p>
-        <p class="raza">Raza: Sabueso mixto</p>
-        <p class="descripcion">Cachorra llena de energía que ama correr.</p>
-        <span class="estado adoptado">Adoptado</span>
-        <a href="catalogo/3.html" class="boton-adopta">Ver perfil</a>
-      </div>
+        <article class="mascota">
+            <div class="foto">
+                <img src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-02.jpg" alt="Perrita Luna" loading="lazy">
+            </div>
+            <div class="mascota-cabecera">
+                <p class="nombre">Luna</p>
+                <span class="estado disponible">Disponible</span>
+            </div>
+            <p class="meta">2 años · Grande · Pastor Alemán mixto</p>
+            <p class="descripcion">Tímida y dulce, siempre busca una caricia.</p>
+            <a href="catalogo/1.html" class="boton-adopta">Ver perfil</a>
+        </article>
 
-      <div class="mascota">
-        <img class="imagen" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-04.jpg" alt="Perrito Toby">
-        <p class="nombre">Toby</p>
-        <p class="edad">Edad: 10 años</p>
-        <p class="tamano">Tamaño: Pequeño</p>
-        <p class="raza">Raza: Mestizo</p>
-        <p class="descripcion">El abuelo tranquilo, fanático de las siestas al sol.</p>
-        <span class="estado disponible">Disponible</span>
-        <a href="catalogo/4.html" class="boton-adopta">Ver perfil</a>
-      </div>
+        <article class="mascota">
+            <div class="foto">
+                <img src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-03.jpg" alt="Perrita Piruleta" loading="lazy">
+            </div>
+            <div class="mascota-cabecera">
+                <p class="nombre">Piruleta</p>
+                <span class="estado adoptado">Adoptado</span>
+            </div>
+            <p class="meta">5 años · Mediano · Sabueso mixto</p>
+            <p class="descripcion">Cachorra llena de energía que ama correr.</p>
+            <a href="catalogo/1.html" class="boton-adopta">Ver perfil</a>
+        </article>
 
-      <div class="mascota">
-        <img class="imagen" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-05.jpg" alt="Perrito Manchitas">
-        <p class="nombre">Manchitas</p>
-        <p class="edad">Edad: 4 años</p>
-        <p class="tamano">Tamaño: Grande</p>
-        <p class="raza">Raza: Mestizo</p>
-        <p class="descripcion">Sociable y curioso, experto en conseguir mimos.</p>
-        <span class="estado disponible">Disponible</span>
-        <a href="catalogo/5.html" class="boton-adopta">Ver perfil</a>
-      </div>
+        <article class="mascota">
+            <div class="foto">
+                <img src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-04.jpg" alt="Perrito Toby" loading="lazy">
+            </div>
+            <div class="mascota-cabecera">
+                <p class="nombre">Toby</p>
+                <span class="estado disponible">Disponible</span>
+            </div>
+            <p class="meta">10 años · Pequeño · Mestizo</p>
+            <p class="descripcion">El abuelo tranquilo, fanático de las siestas al sol.</p>
+            <a href="catalogo/1.html" class="boton-adopta">Ver perfil</a>
+        </article>
 
-      <div class="mascota">
-        <img class="imagen" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-06.jpg" alt="Perrito Milo">
-        <p class="nombre">Milo</p>
-        <p class="edad">Edad: 6 años</p>
-        <p class="tamano">Tamaño: Grande</p>
-        <p class="raza">Raza: Dálmata mixto</p>
-        <p class="descripcion">Un perrito faldero que solo quiere compañía.</p>
-        <span class="estado adoptado">Adoptado</span>
-        <a href="catalogo/6.html" class="boton-adopta">Ver perfil</a>
-      </div>
+        <article class="mascota">
+            <div class="foto">
+                <img src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-05.jpg" alt="Perrito Manchitas" loading="lazy">
+            </div>
+            <div class="mascota-cabecera">
+                <p class="nombre">Manchitas</p>
+                <span class="estado disponible">Disponible</span>
+            </div>
+            <p class="meta">4 años · Grande · Mestizo</p>
+            <p class="descripcion">Sociable y curioso, experto en conseguir mimos.</p>
+            <a href="catalogo/1.html" class="boton-adopta">Ver perfil</a>
+        </article>
 
-      <div class="mascota">
-        <img class="imagen" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-07.jpg" alt="Perrita Daisy">
-        <p class="nombre">Daisy</p>
-        <p class="edad">Edad: 1 año</p>
-        <p class="tamano">Tamaño: Mediano</p>
-        <p class="raza">Raza: Mestizo</p>
-        <p class="descripcion">Muy inteligente, aprende trucos en un segundo.</p>
-        <span class="estado disponible">Disponible</span>
-        <a href="catalogo/7.html" class="boton-adopta">Ver perfil</a>
-      </div>
+        <article class="mascota">
+            <div class="foto">
+                <img src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-06.jpg" alt="Perrito Milo" loading="lazy">
+            </div>
+            <div class="mascota-cabecera">
+                <p class="nombre">Milo</p>
+                <span class="estado adoptado">Adoptado</span>
+            </div>
+            <p class="meta">6 años · Grande · Dálmata mixto</p>
+            <p class="descripcion">Un perrito faldero que solo quiere compañía.</p>
+            <a href="catalogo/1.html" class="boton-adopta">Ver perfil</a>
+        </article>
 
-      <div class="mascota">
-        <img class="imagen" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-08.jpg" alt="Perrito Osito">
-        <p class="nombre">Osito</p>
-        <p class="edad">Edad: 7 años</p>
-        <p class="tamano">Tamaño: Grande</p>
-        <p class="raza">Raza: Labrador mixto</p>
-        <p class="descripcion">Un gigante de buen corazón y pelaje esponjoso.</p>
-        <span class="estado disponible">Disponible</span>
-        <a href="catalogo/8.html" class="boton-adopta">Ver perfil</a>
-      </div>
+        <article class="mascota">
+            <div class="foto">
+                <img src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-07.jpg" alt="Perrita Sople" loading="lazy">
+            </div>
+            <div class="mascota-cabecera">
+                <p class="nombre">Sople</p>
+                <span class="estado disponible">Disponible</span>
+            </div>
+            <p class="meta">1 año · Mediano · Mestizo</p>
+            <p class="descripcion">Muy inteligente, aprende trucos en un segundo.</p>
+            <a href="catalogo/1.html" class="boton-adopta">Ver perfil</a>
+        </article>
+
+        <article class="mascota">
+            <div class="foto">
+                <img src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-08.jpg" alt="Perrito Osito" loading="lazy">
+            </div>
+            <div class="mascota-cabecera">
+                <p class="nombre">Osito</p>
+                <span class="estado disponible">Disponible</span>
+            </div>
+            <p class="meta">7 años · Grande · Labrador mixto</p>
+            <p class="descripcion">Un gigante de buen corazón y pelaje esponjoso.</p>
+            <a href="catalogo/1.html" class="boton-adopta">Ver perfil</a>
+        </article>
+
     </div>
-  </div>
+</section>
 
-  <!-- Seccion contacto -->
-  <section class="section contact" id="contacto" aria-labelledby="contact-title">
-    <div class="container contact-layout">
-      <!-- Informacion institucional directa y redes sin emojis -->
-      <aside class="contact-intro">
-        <p class="eyebrow eyebrow-light">Sé parte del cambio</p>
-        <h2 id="contact-title">Hay muchas formas de dejar huella.</h2>
-        <p>¿Tienes dudas sobre los procesos de adopción, donaciones o voluntariado? Déjanos tu mensaje y te responderemos pronto.</p>
-
-        <address>
-          <a>
-            <small>Escríbenos</small>
-            contacto@patitasfelices.com
-          </a>
-          <a>
-            <small>Llámanos</small>
-            +57 305 484 848
-          </a>
-          <div>
-            <small>Sede Principal</small>
-            Campuslands, San Gil, Santander
-          </div>
-          <div>
-            <small>Horario de atención</small>
-            Lunes a Viernes: 12:30 AM - 6:00 PM
-          </div>
-        </address>
-
-        <div class="social-links">
-          <span>Síguenos</span>
-          <a>Instagram</a>
-          <a>Facebook</a>
-          <a>TikTok</a>
+<!-- ====================== ACCIONES (A) ====================== -->
+<section class="acciones">
+    <div class="seccion-cabeza seccion-cabeza--flex">
+        <div>
+            <span class="kicker">Tú también puedes ayudar</span>
+            <h2>Cuatro maneras de cambiar una vida.</h2>
         </div>
-      </aside>
-
-      <!-- Formulario de contacto -->
-      <form class="contact-form" action="#contacto" method="post">
-        <header>
-          <p class="eyebrow">Cuéntanos</p>
-          <h2>¿Cómo podemos ayudarte?</h2>
-        </header>
-
-        <div class="form-grid">
-          <label class="field">
-            <span>Nombre</span>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-          </label>
-
-          <label class="field">
-            <span>Apellidos</span>
-            <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
-          </label>
-
-          <label class="field">
-            <span>Ciudad</span>
-            <input type="text" id="ciudad" name="ciudad" placeholder="¿Dónde vives?" required>
-          </label>
-
-          <label class="field">
-            <span>Correo electrónico</span>
-            <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" required>
-          </label>
-
-          <label class="field">
-            <span>Teléfono</span>
-            <input type="tel" id="telefono" name="telefono" pattern="[0-9+ ()-]{7,}" placeholder="+57 300 000 0000" required>
-          </label>
-
-          <label class="field">
-            <span>Tipo de consulta</span>
-            <select id="tipo-consulta" name="tipo-consulta" required>
-              <option value="">Selecciona una opción</option>
-              <option value="adopcion">Adopción</option>
-              <option value="donacion">Donación</option>
-              <option value="voluntariado">Voluntariado</option>
-              <option value="informacion_general">Información general</option>
-              <option value="otro">Otro</option>
-            </select>
-          </label>
-
-          <label class="field field-wide">
-            <span>Mensaje</span>
-            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos un poco más..." required></textarea>
-          </label>
-        </div>
-
-        <footer class="form-footer">
-          <small>Al enviar aceptas nuestra política de privacidad.</small>
-          <button class="button button-primary" type="submit">Enviar mensaje <span aria-hidden="true">→</span></button>
-        </footer>
-      </form>
+        <p>No necesitas hacer algo extraordinario. Tu tiempo, tu apoyo y tu cariño marcan la diferencia.</p>
     </div>
-  </section>
+
+    <div class="acciones-grid">
+        <a href="#catalogo" class="accion">
+            <span class="accion-icono"><i class="fa-solid fa-dog"></i></span>
+            <h3>Adopta</h3>
+            <p>Encuentra a tu próximo compañero entre los animales que buscan familia.</p>
+            <span class="accion-link">Ver catálogo <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <a href="#contacto" class="accion">
+            <span class="accion-icono"><i class="fa-solid fa-hand-holding-heart"></i></span>
+            <h3>Dona</h3>
+            <p>Tu aporte apoya el alimento, el cuidado y la protección de los animales.</p>
+            <span class="accion-link">Quiero colaborar <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <a href="#contacto" class="accion">
+            <span class="accion-icono"><i class="fa-solid fa-hands-praying"></i></span>
+            <h3>Sé voluntario</h3>
+            <p>Comparte tu tiempo y tus habilidades con quienes más lo necesitan.</p>
+            <span class="accion-link">Unirme <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <a href="#contacto" class="accion">
+            <span class="accion-icono"><i class="fa-solid fa-envelope"></i></span>
+            <h3>Contáctanos</h3>
+            <p>¿Tienes preguntas o propuestas? Nos encantará conocerte.</p>
+            <span class="accion-link">Hablemos <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+    </div>
+</section>
+
+<!-- ====================== NOSOTROS / MISIÓN Y VISIÓN (B) ====================== -->
+<section class="nosotros" id="nosotros">
+    <div class="nosotros-imagen">
+        <div class="nosotros-sello">
+            <i class="fa-solid fa-paw"></i>
+            <strong>Su vida importa</strong>
+            <small>Hoy y siempre</small>
+        </div>
+    </div>
+
+    <div class="nosotros-texto">
+        <span class="kicker">Quiénes somos</span>
+        <h2>Un compromiso que nace del corazón.</h2>
+        <p class="nosotros-lead">En Patitas Felices creemos que cada animal merece respeto, protección y la posibilidad de encontrar un hogar seguro. Promovemos una cultura de cuidado y responsabilidad hacia todos los seres vivos.</p>
+
+        <article class="pilar">
+            <span class="pilar-icono"><i class="fa-solid fa-seedling"></i></span>
+            <div>
+                <h3>Nuestra misión</h3>
+                <p>Promover el rescate, la protección y la adopción responsable, sensibilizando a la comunidad sobre el respeto y la tenencia responsable.</p>
+            </div>
+        </article>
+
+        <article class="pilar">
+            <span class="pilar-icono"><i class="fa-solid fa-star"></i></span>
+            <div>
+                <h3>Nuestra visión</h3>
+                <p>Contribuir a una sociedad donde el abandono animal disminuya y cada animal viva con dignidad y cariño.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ====================== GALERÍA (C) ====================== -->
+<section class="galeria" id="galeria">
+    <div class="seccion-cabeza seccion-cabeza--flex">
+        <div>
+            <span class="kicker">Momentos que nos inspiran</span>
+            <h2>Detrás de cada patita, una historia.</h2>
+        </div>
+        <p>Un vistazo a los momentos que representan la solidaridad, el cuidado y la esperanza.</p>
+    </div>
+
+    <div class="galeria-grid">
+        <figure class="galeria-foto foto-grande">
+            <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1000&q=85" alt="Perros reunidos al aire libre" loading="lazy">
+            <figcaption>Una oportunidad para volver a confiar.</figcaption>
+        </figure>
+
+        <figure class="galeria-foto">
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=800&q=85" alt="Perro disfrutando al aire libre" loading="lazy">
+            <figcaption>Cuidado que se convierte en felicidad.</figcaption>
+        </figure>
+
+        <figure class="galeria-foto">
+            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=800&q=85" alt="Persona compartiendo tiempo con un perro" loading="lazy">
+            <figcaption>El cariño está en los pequeños momentos.</figcaption>
+        </figure>
+
+        <figure class="galeria-foto">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=85" alt="Primer plano de un perro" loading="lazy">
+            <figcaption>Una mirada lo dice todo.</figcaption>
+        </figure>
+
+        <figure class="galeria-foto foto-ancha">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=85" alt="Dos perros disfrutando al aire libre" loading="lazy">
+            <figcaption>Más historias felices por escribir.</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- ====================== TESTIMONIOS (A) ====================== -->
+<section class="testimonios" id="testimonios">
+    <div class="seccion-cabeza seccion-centro">
+        <div>
+            <span class="kicker">El amor encuentra su camino</span>
+            <h2>Una familia cambia una vida.</h2>
+        </div>
+        <p>Adoptar también significa abrirle la puerta a una nueva forma de querer.</p>
+    </div>
+
+    <div class="testimonios-grid">
+        <article class="testimonio">
+            <i class="fa-solid fa-quote-left testimonio-comilla"></i>
+            <p>Adoptar nos enseñó que el amor no necesita palabras. Cada día nos recibe con una alegría que hace especial nuestro hogar.</p>
+            <div class="testimonio-autor">
+                <span class="avatar"><i class="fa-solid fa-house"></i></span>
+                <div>
+                    <strong>Una familia adoptante</strong>
+                    <small>Una nueva historia</small>
+                </div>
+            </div>
+        </article>
+
+        <article class="testimonio testimonio-destacado">
+            <i class="fa-solid fa-quote-left testimonio-comilla"></i>
+            <p>Descubrí que ayudar también transforma a quien ayuda. Regalar tiempo y cariño significa muchísimo para un animal.</p>
+            <div class="testimonio-autor">
+                <span class="avatar"><i class="fa-solid fa-heart"></i></span>
+                <div>
+                    <strong>Una persona voluntaria</strong>
+                    <small>Compromiso y solidaridad</small>
+                </div>
+            </div>
+        </article>
+
+        <article class="testimonio">
+            <i class="fa-solid fa-quote-left testimonio-comilla"></i>
+            <p>Pensábamos que le dábamos una segunda oportunidad, pero terminamos descubriendo una amistad que no cambiaríamos por nada.</p>
+            <div class="testimonio-autor">
+                <span class="avatar"><i class="fa-solid fa-dog"></i></span>
+                <div>
+                    <strong>Un hogar para siempre</strong>
+                    <small>Adopción responsable</small>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <p class="testimonios-nota">Testimonios de ejemplo para la maqueta académica. Reemplazar por testimonios reales autorizados antes de publicar.</p>
+</section>
+
+<!-- ====================== CTA FINAL ====================== -->
+<section class="cta-final" id="cta-final">
+    <span class="kicker kicker-claro">El próximo final feliz puede empezar contigo</span>
+    <h2>El amor no se compra. <span>Se adopta.</span></h2>
+    <p>Conoce nuestro trabajo, comparte nuestro mensaje y descubre cómo puedes contribuir al bienestar animal.</p>
+    <a href="#catalogo" class="btn btn-blanco">
+        Adopta ahora <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</section>
+
+<!-- ====================== CONTACTO (E) ====================== -->
+<section class="contacto" id="contacto">
+    <div class="contacto-contenido">
+
+        <div class="contacto-info">
+            <p class="kicker kicker-claro">Sé parte del cambio</p>
+            <h2>Hay muchas formas de dejar huella.</h2>
+            <p class="texto">¿Tienes dudas sobre los procesos de adopción, donaciones o voluntariado? Déjanos tu mensaje y te responderemos pronto.</p>
+
+            <div class="datos">
+                <div class="dato">
+                    <small>Escríbenos</small>
+                    <p>contacto@patitasfelices.com</p>
+                </div>
+                <div class="dato">
+                    <small>Llámanos</small>
+                    <p>+57 305 484 848</p>
+                </div>
+                <div class="dato">
+                    <small>Sede principal</small>
+                    <p>Campuslands, San Gil, Santander</p>
+                </div>
+                <div class="dato">
+                    <small>Horario de atención</small>
+                    <p>Lunes a Viernes: 12:30 AM - 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="redes">
+                <span>Síguenos</span>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+
+        <form class="formulario" action="#contacto" method="post">
+            <p class="kicker">Cuéntanos</p>
+            <h2>¿Cómo podemos ayudarte?</h2>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
+                </div>
+
+                <div class="campo">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="¿Dónde vives?" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" pattern="[0-9+ ()-]{7,}" required>
+                </div>
+
+                <div class="campo">
+                    <label for="tipo-consulta">Tipo de consulta</label>
+                    <select id="tipo-consulta" name="tipo-consulta" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="adopcion">Adopción</option>
+                        <option value="donacion">Donación</option>
+                        <option value="voluntariado">Voluntariado</option>
+                        <option value="informacion-general">Información general</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="campo campo-ancho">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos un poco más..." required></textarea>
+                </div>
+            </div>
+
+            <div class="formulario-pie">
+                <small>Al enviar aceptas nuestra política de privacidad.</small>
+                <button class="boton-enviar" type="submit">Enviar mensaje →</button>
+            </div>
+        </form>
+
+    </div>
+</section>
+
+</main>
+
+<!-- ====================== FOOTER (F) ====================== -->
+<footer class="footer" id="footer">
+    <div class="footer-top">
+
+        <div class="footer-marca">
+            <a href="#inicio" class="marca">
+                <span class="marca-icono"><i class="fa-solid fa-paw"></i></span>
+                <span class="marca-texto">
+                    <strong>Patitas Felices</strong>
+                    <small>Fundación rescate S.A.S</small>
+                </span>
+            </a>
+            <p>Transformando vidas, una patita a la vez.</p>
+            <p>Cada vida importa. Cada oportunidad cuenta.</p>
+        </div>
+
+        <nav class="footer-menu" aria-label="Navegación del pie de página">
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Misión y visión</a>
+            <a href="#catalogo">Adoptar</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="footer-contacto">
+            <a href="mailto:contacto@patitasfelices.com">
+                <i class="fa-solid fa-envelope"></i>
+                contacto@patitasfelices.com
+            </a>
+            <a href="#footer">
+                <i class="fa-solid fa-code"></i>
+                Equipo desarrollador
+            </a>
+        </div>
+
+    </div>
+
+    <a href="#catalogo">
+        <div class="pie-sprite" role="img" aria-label="Perrito saltando"></div>
+    </a>
+
+    <div class="footer-bottom">
+        <span>© 2026 Fundación Patitas Felices · Todos los derechos reservados</span>
+        <a href="#inicio">Volver arriba <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+</footer>
 
 </body>
 </html>
