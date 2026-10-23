@@ -1,596 +1,262 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fundación Patitas Felices - Perfil de Rocky</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce a Rocky, un perro mestizo de 3 años que busca un hogar lleno de amor. Fundación Patitas Felices.">
 
+    <title>Rocky | Fundación Patitas Felices</title>
 
-  <style>
-    /* Reset y base */
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.5;
-        background-color: #f7f7f7;
-        color: #333;
-    }
-
-    /* Contenedor perfil */
-    .perfil-animal {
-        width: 90%;
-        max-width: 1100px;
-        margin: 30px auto;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    /* Barra volver */
-    .barra-volver {
-        display: flex;
-    }
-
-    .boton-volver {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 0.9rem;
-        padding: 8px 16px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-        transition: background-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .boton-volver:hover {
-        background-color: #eee;
-        transform: translateX(-3px);
-    }
-
-    /* Vista principal */
-    .vista-principal {
-        display: grid;
-        grid-template-columns: 1fr 1.25fr;
-        gap: 35px;
-        background-color: #ffffff;
-        border: 1px solid #e0e0e0;
-        border-radius: 16px;
-        padding: 28px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-    }
-
-    /* Foto principal */
-    .contenedor-foto {
-        position: relative;
-        width: 100%;
-        border-radius: 12px;
-        overflow: hidden;
-        background-color: #eee;
-        border: 1px solid #e5e5e5;
-    }
-
-    .foto-principal {
-        width: 100%;
-        height: 100%;
-        max-height: 460px;
-        object-position: top center;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.4s ease;
-    }
-
-    .contenedor-foto:hover .foto-principal {
-        transform: scale(1.03);
-    }
-
-    /* Indicador estado */
-    .estado {
-        display: inline-block;
-        padding: 4px 12px;
-        border-radius: 12px;
-        font-size: 0.8rem;
-        font-weight: bold;
-        color: #fff;
-    }
-
-    .estado.disponible {
-        background: #2e9e5b;
-        animation: pulso 1.5s ease infinite;
-    }
-
-    .estado.adoptado {
-        background: #d9534f;
-    }
-
-    .contenedor-foto > .estado {
-        position: absolute;
-        top: 14px;
-        right: 14px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-    }
-
-    @keyframes pulso {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.08);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-
-    /* Bloque informacion */
-    .bloque-informacion {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .nombre-perfil {
-        font-size: 2.2rem;
-        color: #222;
-        line-height: 1.1;
-    }
-
-    .lema-mascota {
-        font-style: italic;
-        color: #666;
-        font-size: 0.95rem;
-    }
-
-    /* Detalles tecnicos */
-    .detalles-tecnicos {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-    }
-
-    .tarjeta-dato {
-        background-color: #fafafa;
-        border: 1px solid #e5e5e5;
-        border-radius: 8px;
-        padding: 10px 8px;
-        text-align: center;
-    }
-
-    .etiqueta-dato {
-        display: block;
-        font-size: 0.72rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: #777;
-        font-weight: 600;
-    }
-
-    .valor-dato {
-        display: block;
-        font-size: 0.95rem;
-        color: #222;
-        font-weight: bold;
-        margin-top: 3px;
-    }
-
-    /* Historias y texto */
-    .historias-perfil {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .tarjeta-info {
-        background-color: #ffffff;
-        border: 1px solid #e8e8e8;
-        border-radius: 10px;
-        padding: 12px 16px;
-    }
-
-    .tarjeta-info h3 {
-        font-size: 0.95rem;
-        color: #222;
-        margin-bottom: 4px;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .tarjeta-info p {
-        font-size: 0.88rem;
-        color: #555;
-        line-height: 1.45;
-    }
-
-    /* Perfil boton */
-    .bloque-informacion > .boton-adopta {
-        align-self: flex-start;
-        display: inline-block;
-        padding: 14px 28px;
-        border-radius: 8px;
-        border: 1px solid #222;
-        background-color: #222;
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 0.95rem;
-        cursor: pointer;
-        transition: background-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .bloque-informacion > .boton-adopta:hover {
-        background-color: #444;
-        transform: translateY(-2px);
-    }
-
-    /* Relacionados seccion */
-    .relacionados-seccion {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        margin-top: 10px;
-    }
-
-    .encabezado-relacionados {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-
-    .encabezado-relacionados h3 {
-        font-size: 1.4rem;
-        color: #222;
-    }
-
-    .subtitulo-relacionados {
-        font-size: 0.9rem;
-        color: #666;
-        margin-top: 2px;
-    }
-
-    .controles-carrusel {
-        display: flex;
-        gap: 6px;
-    }
-
-  
-
-
-
-    /* Carrusel relacionados */
-    .carrusel-relacionados {
-        display: flex;
-        gap: 18px;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        padding: 10px 4px 18px 4px;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    /* Barra scroll personalizada */
-    .carrusel-relacionados::-webkit-scrollbar {
-        height: 7px;
-    }
-
-    .carrusel-relacionados::-webkit-scrollbar-track {
-        background: #e5e5e5;
-        border-radius: 10px;
-    }
-
-    .carrusel-relacionados::-webkit-scrollbar-thumb {
-        background: #999;
-        border-radius: 10px;
-    }
-
-    .carrusel-relacionados::-webkit-scrollbar-thumb:hover {
-        background: #666;
-    }
-
-    /* Mascota relacionada */
-    .mascota-relacionada {
-        flex: 0 0 220px;
-        scroll-snap-align: start;
-        background-color: #fff;
-        border: 1px solid #e0e0e0;
-        border-radius: 12px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .mascota-relacionada:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-    }
-
-    .contenedor-miniatura {
-        position: relative;
-        width: 100%;
-        height: 160px;
-        overflow: hidden;
-        background-color: #eee;
-    }
-
-    .imagen-miniatura {
-        width: 100%;
-        height: 100%;
-        object-position: top center;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.4s ease;
-    }
-
-    .mascota-relacionada:hover .imagen-miniatura {
-        transform: scale(1.05);
-    }
-
-    .contenedor-miniatura > .estado {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 0.72rem;
-        padding: 3px 10px;
-    }
-
-    .cuerpo-miniatura {
-        padding: 12px;
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        flex: 1;
-    }
-
-    .nombre-miniatura {
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: #222;
-    }
-
-    .datos-miniatura {
-        font-size: 0.82rem;
-        color: #666;
-    }
-
-    .mascota-relacionada .boton-adopta {
-        margin-top: auto;
-        display: block;
-        padding: 9px;
-        border-radius: 6px;
-        border: 1px solid #333;
-        background-color: #333;
-        color: #fff;
-        text-decoration: none;
-        font-size: 0.85rem;
-        font-weight: bold;
-        text-align: center;
-        transition: background-color 0.2s ease;
-    }
-
-    .mascota-relacionada .boton-adopta:hover {
-        background-color: #555;
-    }
-
-    /* Responsive */
-    @media (max-width: 850px) {
-        .vista-principal {
-            grid-template-columns: 1fr;
-            padding: 20px;
-            gap: 25px;
-        }
-
-        .foto-principal {
-            max-height: 350px;
-        }
-
-        .detalles-tecnicos {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .bloque-informacion > .boton-adopta {
-            width: 100%;
-            text-align: center;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .perfil-animal {
-            width: 92%;
-            margin: 20px auto;
-            gap: 22px;
-        }
-
-        .vista-principal {
-            padding: 15px;
-        }
-
-        .foto-principal {
-            max-height: 280px;
-        }
-
-        .detalles-tecnicos {
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-        }
-
-        .mascota-relacionada {
-            flex: 0 0 185px;
-        }
-
-        .contenedor-miniatura {
-            height: 135px;
-        }
-    }
-  </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/perfil.css">
 </head>
+
 <body>
 
-  <div class="perfil-animal">
+<!-- ====================== HEADER ====================== -->
+<header class="header">
+    <a href="../index.html" class="marca">
+        <span class="marca-icono"><i class="fa-solid fa-paw"></i></span>
+        <span class="marca-texto">
+            <strong>Patitas Felices</strong>
+            <small>Fundación de protección animal</small>
+        </span>
+    </a>
 
-    <!-- Barra volver -->
-    <div class="barra-volver">
-      <a href="../index.html" class="boton-volver">Volver al catálogo</a>
+    <nav class="menu" aria-label="Navegación principal">
+        <a href="../index.html#inicio">Inicio</a>
+        <a href="../index.html#nosotros">Nosotros</a>
+        <a href="../index.html#catalogo">Adoptar</a>
+        <a href="../index.html#galeria">Galería</a>
+        <a href="../index.html#contacto">Contacto</a>
+    </nav>
+
+    <a href="../index.html#catalogo" class="btn btn-coral">Adopta ahora</a>
+</header>
+
+<main class="perfil-animal">
+
+    <!-- ====================== MIGAS DE PAN ====================== -->
+    <nav class="migas" aria-label="Ruta de navegación">
+        <a href="../index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="../index.html#catalogo">Catálogo</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span aria-current="page">Rocky</span>
+    </nav>
+
+    <!-- ====================== VISTA PRINCIPAL ====================== -->
+    <article class="vista-principal">
+
+        <div class="contenedor-foto">
+            <img class="foto-principal"
+                 src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-01.jpg"
+                 alt="Fotografía principal de Rocky, un perro mestizo de pelaje claro">
+            <span class="estado disponible" aria-label="Estado: Disponible para adopción">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponible
+            </span>
+        </div>
+
+        <div class="bloque-informacion">
+            <div>
+                <h1 class="nombre-perfil">Rocky</h1>
+                <p class="lema-mascota">"El guardián del barrio, juguetón y protector."</p>
+            </div>
+
+            <div class="detalles-tecnicos">
+                <div class="tarjeta-dato">
+                    <i class="fa-solid fa-cake-candles" aria-hidden="true"></i>
+                    <span class="etiqueta-dato">Edad</span>
+                    <span class="valor-dato">3 años</span>
+                </div>
+                <div class="tarjeta-dato">
+                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                    <span class="etiqueta-dato">Sexo</span>
+                    <span class="valor-dato">Macho</span>
+                </div>
+                <div class="tarjeta-dato">
+                    <i class="fa-solid fa-ruler-vertical" aria-hidden="true"></i>
+                    <span class="etiqueta-dato">Tamaño</span>
+                    <span class="valor-dato">Mediano</span>
+                </div>
+                <div class="tarjeta-dato">
+                    <i class="fa-solid fa-dog" aria-hidden="true"></i>
+                    <span class="etiqueta-dato">Raza</span>
+                    <span class="valor-dato">Mestizo</span>
+                </div>
+            </div>
+
+            <div class="historias-perfil">
+                <div class="tarjeta-info">
+                    <h3><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> Historial de rescate</h3>
+                    <p>Encontrado en una zona escolar del barrio protegiendo a los niños, esperando pacientemente una segunda oportunidad.</p>
+                </div>
+                <div class="tarjeta-info">
+                    <h3><i class="fa-solid fa-stethoscope" aria-hidden="true"></i> Estado de salud</h3>
+                    <p>Vacunado, esterilizado, desparasitado y con excelente energía general.</p>
+                </div>
+                <div class="tarjeta-info">
+                    <h3><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Comportamiento</h3>
+                    <p>Es un protector nato, sumamente fiel, juguetón con otros perritos y muy noble con los humanos.</p>
+                </div>
+            </div>
+
+            <div class="cta-adopcion">
+                <a href="../index.html#contacto" class="btn btn-coral">
+                    <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
+                    Solicitud de Adopción
+                </a>
+                <a href="../index.html#catalogo" class="btn btn-borde">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    Volver al catálogo
+                </a>
+            </div>
+        </div>
+
+    </article>
+
+    <!-- ====================== RELACIONADOS ====================== -->
+    <section class="relacionados-seccion" aria-labelledby="relacionados-titulo">
+        <div class="encabezado-relacionados">
+            <div>
+                <h2 id="relacionados-titulo">Otros peluditos que buscan hogar</h2>
+                <p class="subtitulo-relacionados">Explora más compañeros y encuentra tu match perfecto.</p>
+            </div>
+        </div>
+
+        <div class="carrusel-wrap">
+            <div class="carrusel-relacionados" role="region" aria-label="Carrusel de animales relacionados" tabindex="0">
+
+                <article class="mascota-relacionada">
+                    <div class="contenedor-miniatura">
+                        <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-02.jpg" alt="Perrita Luna" loading="lazy">
+                        <span class="estado disponible">Disponible</span>
+                    </div>
+                    <div class="cuerpo-miniatura">
+                        <p class="nombre-miniatura">Luna</p>
+                        <p class="datos-miniatura">2 años • Pastor Alemán</p>
+                        <a href="1.html" class="boton-adopta-mini">Ver perfil</a>
+                    </div>
+                </article>
+
+                <article class="mascota-relacionada">
+                    <div class="contenedor-miniatura">
+                        <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-03.jpg" alt="Perrita Piruleta" loading="lazy">
+                        <span class="estado adoptado">Adoptado</span>
+                    </div>
+                    <div class="cuerpo-miniatura">
+                        <p class="nombre-miniatura">Piruleta</p>
+                        <p class="datos-miniatura">5 años • Sabueso mixto</p>
+                        <a href="1.html" class="boton-adopta-mini">Ver perfil</a>
+                    </div>
+                </article>
+
+                <article class="mascota-relacionada">
+                    <div class="contenedor-miniatura">
+                        <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-04.jpg" alt="Perrito Toby" loading="lazy">
+                        <span class="estado disponible">Disponible</span>
+                    </div>
+                    <div class="cuerpo-miniatura">
+                        <p class="nombre-miniatura">Toby</p>
+                        <p class="datos-miniatura">10 años • Mestizo</p>
+                        <a href="1.html" class="boton-adopta-mini">Ver perfil</a>
+                    </div>
+                </article>
+
+                <article class="mascota-relacionada">
+                    <div class="contenedor-miniatura">
+                        <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-05.jpg" alt="Perrito Manchitas" loading="lazy">
+                        <span class="estado disponible">Disponible</span>
+                    </div>
+                    <div class="cuerpo-miniatura">
+                        <p class="nombre-miniatura">Manchitas</p>
+                        <p class="datos-miniatura">4 años • Mestizo</p>
+                        <a href="1.html" class="boton-adopta-mini">Ver perfil</a>
+                    </div>
+                </article>
+
+                <article class="mascota-relacionada">
+                    <div class="contenedor-miniatura">
+                        <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-06.jpg" alt="Perrito Milo" loading="lazy">
+                        <span class="estado adoptado">Adoptado</span>
+                    </div>
+                    <div class="cuerpo-miniatura">
+                        <p class="nombre-miniatura">Milo</p>
+                        <p class="datos-miniatura">6 años • Dálmata mixto</p>
+                        <a href="1.html" class="boton-adopta-mini">Ver perfil</a>
+                    </div>
+                </article>
+
+                <article class="mascota-relacionada">
+                    <div class="contenedor-miniatura">
+                        <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-07.jpg" alt="Perrita Daisy" loading="lazy">
+                        <span class="estado disponible">Disponible</span>
+                    </div>
+                    <div class="cuerpo-miniatura">
+                        <p class="nombre-miniatura">Daisy</p>
+                        <p class="datos-miniatura">1 año • Mestizo</p>
+                        <a href="1.html" class="boton-adopta-mini">Ver perfil</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="footer" id="footer">
+    <div class="footer-top">
+        <div class="footer-marca">
+            <a href="../index.html" class="marca">
+                <span class="marca-icono"><i class="fa-solid fa-paw"></i></span>
+                <span class="marca-texto">
+                    <strong>Patitas Felices</strong>
+                    <small>Fundación rescate S.A.S</small>
+                </span>
+            </a>
+            <p>Transformando vidas, una patita a la vez.</p>
+            <p>Cada vida importa. Cada oportunidad cuenta.</p>
+        </div>
+
+        <nav class="footer-menu" aria-label="Navegación del pie de página">
+            <a href="../index.html#inicio">Inicio</a>
+            <a href="../index.html#nosotros">Misión y visión</a>
+            <a href="../index.html#catalogo">Adoptar</a>
+            <a href="../index.html#galeria">Galería</a>
+            <a href="../index.html#contacto">Contacto</a>
+        </nav>
+
+        <div class="footer-contacto">
+            <a href="mailto:contacto@patitasfelices.com">
+                <i class="fa-solid fa-envelope"></i>
+                contacto@patitasfelices.com
+            </a>
+            <a href="../index.html#footer">
+                <i class="fa-solid fa-code"></i>
+                Equipo desarrollador
+            </a>
+        </div>
     </div>
 
-    <!-- Vista principal -->
-    <div class="vista-principal">
-      <div class="contenedor-foto">
-        <img class="foto-principal" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-01.jpg" alt="Fotografía principal de Rocky">
-        <span class="estado disponible">Disponible</span>
-      </div>
-
-      <div class="bloque-informacion">
-        <div>
-          <h1 class="nombre-perfil">Rocky</h1>
-          <p class="lema-mascota">"El guardián del barrio, juguetón y protector."</p>
-        </div>
-
-        <div class="detalles-tecnicos">
-          <div class="tarjeta-dato">
-            <span class="etiqueta-dato">Edad</span>
-            <span class="valor-dato">3 años</span>
-          </div>
-          <div class="tarjeta-dato">
-            <span class="etiqueta-dato">Sexo</span>
-            <span class="valor-dato">Macho</span>
-          </div>
-          <div class="tarjeta-dato">
-            <span class="etiqueta-dato">Tamaño</span>
-            <span class="valor-dato">Mediano</span>
-          </div>
-          <div class="tarjeta-dato">
-            <span class="etiqueta-dato">Raza</span>
-            <span class="valor-dato">Mestizo</span>
-          </div>
-        </div>
-
-        <div class="historias-perfil">
-          <div class="tarjeta-info">
-            <h3>Historial de rescate</h3>
-            <p>Encontrado en una zona escolar del barrio protegiendo a los niños, esperando pacientemente una segunda oportunidad.</p>
-          </div>
-
-          <div class="tarjeta-info">
-            <h3>Estado de salud</h3>
-            <p>Vacunado, esterilizado, desparasitado y con excelente energía general.</p>
-          </div>
-
-          <div class="tarjeta-info">
-            <h3>Comportamiento</h3>
-            <p>Es un protector nato, sumamente fiel, juguetón con otros perritos y muy noble con los humanos.</p>
-          </div>
-        </div>
-
-        <a class="boton-adopta">Solicitud de Adopción</a>
-      </div>
+    <div class="footer-bottom">
+        <span>© 2026 Fundación Patitas Felices · Todos los derechos reservados</span>
+        <a href="../index.html#inicio">Volver arriba <i class="fa-solid fa-arrow-up"></i></a>
     </div>
 
-    <!-- Relacionados seccion -->
-    <div class="relacionados-seccion">
-      <div class="encabezado-relacionados">
-        <div>
-          <h3>Otros peluditos que buscan hogar</h3>
-          <p class="subtitulo-relacionados">Explora más compañeros y encuentra tu match perfecto</p>
-        </div>
+    <!-- ====================== PERRITO FLOTANTE ====================== -->
+<p class="mensaje-flotante">Adóptame!</p>
+    <a href="#catalogo">
+        <div class="pie-sprite" role="img" aria-label="Perrito saltando"></div>
+    </a>
+</footer>
 
-        
-      </div>
 
-      <div class="carrusel-relacionados">
-
-        <!-- Relacionado 1 -->
-        <div id="rel-luna" class="mascota-relacionada">
-          <div class="contenedor-miniatura">
-            <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-02.jpg" alt="Perrita Luna">
-            <span class="estado disponible">Disponible</span>
-          </div>
-          <div class="cuerpo-miniatura">
-            <p class="nombre-miniatura">Luna</p>
-            <p class="datos-miniatura">2 años • Pastor Alemán</p>
-            <a href="1.html" class="boton-adopta">Ver perfil</a>
-          </div>
-        </div>
-
-        <!-- Relacionado 2 -->
-        <div id="rel-piruleta" class="mascota-relacionada">
-          <div class="contenedor-miniatura">
-            <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-03.jpg" alt="Perrita Piruleta">
-            <span class="estado adoptado">Adoptado</span>
-          </div>
-          <div class="cuerpo-miniatura">
-            <p class="nombre-miniatura">Piruleta</p>
-            <p class="datos-miniatura">5 años • Sabueso mixto</p>
-            <a href="1.html" class="boton-adopta">Ver perfil</a>
-          </div>
-        </div>
-
-        <!-- Relacionado 3 -->
-        <div id="rel-toby" class="mascota-relacionada">
-          <div class="contenedor-miniatura">
-            <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-04.jpg" alt="Perrito Toby">
-            <span class="estado disponible">Disponible</span>
-          </div>
-          <div class="cuerpo-miniatura">
-            <p class="nombre-miniatura">Toby</p>
-            <p class="datos-miniatura">10 años • Mestizo</p>
-            <a href="1.html" class="boton-adopta">Ver perfil</a>
-          </div>
-        </div>
-
-        <!-- Relacionado 4 -->
-        <div id="rel-manchitas" class="mascota-relacionada">
-          <div class="contenedor-miniatura">
-            <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-05.jpg" alt="Perrito Manchitas">
-            <span class="estado disponible">Disponible</span>
-          </div>
-          <div class="cuerpo-miniatura">
-            <p class="nombre-miniatura">Manchitas</p>
-            <p class="datos-miniatura">4 años • Mestizo</p>
-            <a href="1.html" class="boton-adopta">Ver perfil</a>
-          </div>
-        </div>
-
-        <!-- Relacionado 5 -->
-        <div id="rel-milo" class="mascota-relacionada">
-          <div class="contenedor-miniatura">
-            <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-06.jpg" alt="Perrito Milo">
-            <span class="estado adoptado">Adoptado</span>
-          </div>
-          <div class="cuerpo-miniatura">
-            <p class="nombre-miniatura">Milo</p>
-            <p class="datos-miniatura">6 años • Dálmata mixto</p>
-            <a href="1.html" class="boton-adopta">Ver perfil</a>
-          </div>
-        </div>
-
-        <!-- Relacionado 6 -->
-        <div id="rel-daisy" class="mascota-relacionada">
-          <div class="contenedor-miniatura">
-            <img class="imagen-miniatura" src="https://caridadanimal.org/wp-content/themes/caridad-animal/assets/img/perro-07.jpg" alt="Perrita Daisy">
-            <span class="estado disponible">Disponible</span>
-          </div>
-          <div class="cuerpo-miniatura">
-            <p class="nombre-miniatura">Daisy</p>
-            <p class="datos-miniatura">1 año • Mestizo</p>
-            <a href="1.html" class="boton-adopta">Ver perfil</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
 
 </body>
 </html>

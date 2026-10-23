@@ -1,0 +1,495 @@
+
+/* ---------- Contenedor principal ---------- */
+.perfil-animal {
+    width: 90%;
+    max-width: 1140px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ---------- Migas de pan ---------- */
+.migas {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.migas a {
+    color: var(--texto);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.migas a:hover { color: var(--coral); }
+
+.migas i {
+    font-size: 0.55rem;
+    color: var(--muted);
+    opacity: 0.7;
+}
+
+.migas span { color: var(--noche); font-weight: 600; }
+
+/* ---------- Vista principal ---------- */
+.vista-principal {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    padding: 32px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+/* Foto */
+.contenedor-foto {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--gris);
+    aspect-ratio: 4 / 5;
+    max-height: 560px;
+}
+
+.contenedor-foto::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 70% 0;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.25), transparent);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.foto-principal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.6s ease;
+}
+
+.contenedor-foto:hover .foto-principal {
+    transform: scale(1.03);
+}
+
+.contenedor-foto > .estado {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.contenedor-foto > .estado i {
+    font-size: 0.72rem;
+}
+
+/* Bloque info */
+.bloque-informacion {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.nombre-perfil {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--noche);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+}
+
+.lema-mascota {
+    font-style: italic;
+    color: var(--texto);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Grid de datos técnicos */
+.detalles-tecnicos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.tarjeta-dato {
+    background: var(--gris);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 12px 8px;
+    text-align: center;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.tarjeta-dato:hover {
+    border-color: var(--rosa);
+    background: var(--blanco);
+}
+
+.tarjeta-dato i {
+    display: block;
+    color: var(--coral);
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.etiqueta-dato {
+    display: block;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.valor-dato {
+    display: block;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.92rem;
+    color: var(--noche);
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+/* Tarjetas de información */
+.historias-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tarjeta-info {
+    background: var(--gris);
+    border-radius: 10px;
+    padding: 14px 16px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.tarjeta-info:hover {
+    background: var(--blanco);
+    transform: translateX(2px);
+    outline: 1px solid var(--borde);
+}
+
+.tarjeta-info h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--noche);
+    margin-bottom: 6px;
+}
+
+.tarjeta-info h3 i {
+    color: var(--coral);
+    font-size: 0.85rem;
+}
+
+.tarjeta-info p {
+    font-size: 0.88rem;
+    color: var(--texto);
+    line-height: 1.55;
+}
+
+/* CTA doble */
+.cta-adopcion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.cta-adopcion .btn {
+    padding: 14px 26px;
+    font-size: 0.9rem;
+}
+
+/* ---------- Relacionados ---------- */
+.relacionados-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.encabezado-relacionados {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.encabezado-relacionados h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.5rem, 2.8vw, 2rem);
+    color: var(--noche);
+}
+
+.subtitulo-relacionados {
+    font-size: 0.9rem;
+    color: var(--texto);
+    margin-top: 4px;
+}
+
+/* Fade a la derecha indicando overflow */
+.carrusel-wrap { position: relative; }
+
+.carrusel-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 20px;
+    width: 40px;
+    background: linear-gradient(to right, transparent, var(--gris));
+    pointer-events: none;
+}
+
+/* Carrusel horizontal */
+.carrusel-relacionados {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 10px 4px 20px 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rosa) var(--borde);
+    border-radius: 12px;
+}
+
+.carrusel-relacionados::-webkit-scrollbar { height: 6px; }
+.carrusel-relacionados::-webkit-scrollbar-track {
+    background: var(--borde);
+    border-radius: 10px;
+}
+.carrusel-relacionados::-webkit-scrollbar-thumb {
+    background: var(--rosa);
+    border-radius: 10px;
+}
+.carrusel-relacionados::-webkit-scrollbar-thumb:hover { background: var(--coral); }
+
+/* Mini tarjeta */
+.mascota-relacionada {
+    flex: 0 0 240px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.mascota-relacionada:hover {
+    transform: translateY(-4px);
+    border-color: var(--rosa);
+    box-shadow: var(--shadow);
+}
+
+.contenedor-miniatura {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    background: var(--gris);
+}
+
+.imagen-miniatura {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.mascota-relacionada:hover .imagen-miniatura {
+    transform: scale(1.06);
+}
+
+.contenedor-miniatura > .estado {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.65rem;
+    padding: 3px 8px;
+}
+
+.cuerpo-miniatura {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.nombre-miniatura {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--noche);
+}
+
+.datos-miniatura {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.mascota-relacionada .boton-adopta-mini {
+    margin-top: auto;
+    padding: 9px 12px;
+    border-radius: 8px;
+    background: var(--coral);
+    color: var(--blanco);
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.mascota-relacionada .boton-adopta-mini:hover {
+    background: var(--coral-hover);
+    transform: translateY(-1px);
+}
+
+/* ---------- Perrito flotante ---------- */
+.perrito-flotante {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 90;
+
+    display: grid;
+    place-items: center;
+    width: 60px;
+    height: 60px;
+
+    background: var(--coral);
+    color: var(--blanco);
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(244, 63, 94, 0.35);
+
+    font-size: 1.6rem;
+    text-decoration: none;
+
+    animation: perrito-saltando 1.2s ease-in-out infinite;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.perrito-flotante:hover {
+    background: var(--coral-hover);
+    animation-play-state: paused;
+    transform: scale(1.1);
+}
+
+.perrito-flotante:focus-visible {
+    outline: 3px solid var(--noche);
+    outline-offset: 4px;
+}
+
+.perrito-flotante::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 8px;
+    background: rgba(15, 23, 42, 0.22);
+    border-radius: 50%;
+    filter: blur(3px);
+    animation: perrito-sombra 1.2s ease-in-out infinite;
+}
+
+@keyframes perrito-saltando {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    25%      { transform: translateY(-12px) rotate(-5deg); }
+    50%      { transform: translateY(-20px) rotate(0); }
+    75%      { transform: translateY(-12px) rotate(5deg); }
+}
+
+@keyframes perrito-sombra {
+    0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+    50%      { opacity: 0.25; transform: translateX(-50%) scale(0.6); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .vista-principal {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 28px;
+    }
+
+    .contenedor-foto {
+        aspect-ratio: 16 / 10;
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 640px) {
+    .perfil-animal {
+        width: 92%;
+        margin: 24px auto;
+        gap: 30px;
+    }
+
+    .vista-principal {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .contenedor-foto {
+        aspect-ratio: 4 / 3;
+        max-height: 300px;
+    }
+
+    .detalles-tecnicos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-adopcion { flex-direction: column; }
+    .cta-adopcion .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mascota-relacionada { flex: 0 0 200px; }
+    .contenedor-miniatura { height: 140px; }
+
+    .perrito-flotante {
+        width: 52px;
+        height: 52px;
+        right: 14px;
+        bottom: 14px;
+        font-size: 1.35rem;
+    }
+}
+
+/* ---------- Accesibilidad ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .perrito-flotante,
+    .perrito-flotante::after,
+    .estado.disponible {
+        animation: none !important;
+    }
+}
