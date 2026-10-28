@@ -7,6 +7,9 @@ Maqueta web institucional y de adopción para una fundación de protección anim
 **HTML5 + CSS3 nativo · 100% responsive · Sin JavaScript**
 
 ---
+Para entrar a la pagina del volutariado pulse en el boton de "Voluntariado" en el header.
+O modificando la url, cambiando de index.html a voluntariado.html
+---
 
 ## 📖 Descripción
 
