@@ -1,0 +1,29 @@
+(1H) Página de Voluntariado
+
+La Fundación Patitas Felices desea incentivar la participación de voluntarios. 
+Para ello, crea una nueva página voluntariado.html que cumpla con lo siguiente:
+
+
+
+Banner introductorio con el título “Únete como Voluntario” y un subtítulo motivador.
+Sección informativa con dos bloques:
+Beneficios de ser voluntario.
+Responsabilidades y compromiso.
+Formulario de inscripción (maquetado, no funcional) con los siguientes campos:
+Nombre completo.
+Ciudad.
+Correo electrónico.
+Disponibilidad horaria (select: fines de semana, entre semana, ambos).
+Área de interés (checkbox: cuidado animal, logística, campañas).
+Botón “Quiero ser voluntario”.
+Diseño responsive con al menos 2 breakpoints (móvil y escritorio).
+Estilo coherente con el resto del proyecto.
+
+
+Resultado esperado
+
+Entregables:
+
+Archivos: voluntariado.html, css/styles.css, /img/* (si aplica) y README.md breve indicando cómo visualizar la página.
+Página debe funcionar en cualquier navegador moderno, sin frameworks ni JavaScript.
+Entrega como carpeta .zip organizada o en repositorio del curso (GitHub).

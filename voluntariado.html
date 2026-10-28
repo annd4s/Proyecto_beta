@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patitas Felices | Únete como Voluntario</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Estilos específicos -->
+    <link rel="stylesheet" href="css/voluntariado.css">
+</head>
+<body>
+
+<main>
+
+<!-- ====== Banner ====== -->
+<section class="banner">
+    <div class="banner-info">
+        <span class="kicker">Sé parte del cambio</span>
+        <h1>Únete como <span>Voluntario</span></h1>
+        <p>Tu tiempo y tu cariño pueden cambiar una vida. Súmate al equipo que rescata, cuida y protege a los animales de Patitas Felices.</p>
+        <div class="banner-botones">
+            <a href="#contacto" class="btn btn-coral">
+                Quiero ser voluntario <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="index.html" class="btn btn-borde">Volver al inicio</a>
+        </div>
+    </div>
+
+    <div class="banner-imagen">
+        <div class="banner-nota">
+            <i class="fa-solid fa-hands-praying"></i>
+            <span>Muchas manos, una misión</span>
+        </div>
+    </div>
+</section>
+
+<!-- ====== Info ====== -->
+<section class="info">
+    <div class="seccion-cabeza seccion-centro">
+        <span class="kicker">Ser voluntario</span>
+        <h2>Antes de dar el paso, conoce lo que implica.</h2>
+        <p>Ser voluntario es una experiencia que transforma vidas, incluida la tuya. Esto es lo que puedes esperar de nosotros y lo que esperamos de ti.</p>
+    </div>
+
+    <div class="info-grid">
+        <article class="info-card">
+            <span class="info-icono"><i class="fa-solid fa-heart"></i></span>
+            <h3>Beneficios de ser voluntario</h3>
+            <ul class="info-lista">
+                <li>Formas parte de una causa que salva vidas.</li>
+                <li>Ganas experiencia en cuidado y trabajo en equipo.</li>
+                <li>Recibes capacitación y acompañamiento constante.</li>
+                <li>Conoces personas con tu misma pasión por los animales.</li>
+            </ul>
+        </article>
+
+        <article class="info-card">
+            <span class="info-icono"><i class="fa-solid fa-clipboard-check"></i></span>
+            <h3>Responsabilidades y compromiso</h3>
+            <ul class="info-lista">
+                <li>Cumplir con los horarios que acuerdes con el equipo.</li>
+                <li>Tratar a cada animal con respeto y paciencia.</li>
+                <li>Seguir las normas de seguridad e higiene.</li>
+                <li>Comunicar con tiempo cualquier cambio o dificultad.</li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+<section class="contacto" id="contacto">
+    <div class="contacto-contenido">
+
+        <div class="contacto-info">
+            <p class="kicker kicker-claro">Sé parte del cambio</p>
+            <h2>Es hora de dejar tu huella.</h2>
+            <p class="texto">¿Tienes dudas sobre los procesos de voluntariado? Déjanos tu mensaje y te responderemos pronto.</p>
+
+            <div class="datos">
+                <div class="dato">
+                    <small>Escríbenos</small>
+                    <p>contacto@patitasfelices.com</p>
+                </div>
+                <div class="dato">
+                    <small>Llámanos</small>
+                    <p>+57 305 484 848</p>
+                </div>
+                <div class="dato">
+                    <small>Sede principal</small>
+                    <p>Campuslands, San Gil, Santander</p>
+                </div>
+                <div class="dato">
+                    <small>Horario de atención</small>
+                    <p>Lunes a Viernes: 12:30 AM - 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="redes">
+                <span>Síguenos</span>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+
+        <form class="formulario" action="#contacto" method="post">
+            <p class="kicker">Unete como voluntario!</p>
+            <h2>Formulario de inscripción</h2>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
+                </div>
+
+                <div class="campo">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="¿Dónde vives?" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" pattern="[0-9+ ()-]{7,}" required>
+                </div>
+
+                <div class="campo">
+                    <label for="disponibilidad">Disponibilidad horaria</label>
+                    <select id="disponibilidad" name="disponibilidad" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="entre-semana">Entre semana</option>
+                        <option value="fin-semana">Fines de semana</option>
+                        <option value="ambos">Ambos</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="horas">Cantidad de horas</label>
+                    <select id="horas" name="horas" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="1-3">Entre 1 y 3 horas</option>
+                        <option value="4-6">Entre 4 y 6 horas</option>
+                        <option value="6-mas">Más de 6 horas</option>
+                    </select>
+                </div>
+                <!-- Área de interés -->
+                <div class="campo campo-ancho">
+                    <span class="interes-titulo">Área de interés</span>
+                    <div class="intereses">
+                    
+                        <label class="interes">
+                            <input type="checkbox" name="interes" value="cuidado-animal">
+                            <span>Cuidado animal</span>
+                        </label>
+
+                        <label class="interes">
+                            <input type="checkbox" name="interes" value="logistica">
+                            <span>Logística</span>
+                        </label>
+
+                        <label class="interes">
+                            <input type="checkbox" name="interes" value="campanas">
+                            <span>Campañas</span>
+                        </label>
+
+                        <label class="interes">
+                            <input type="checkbox" name="interes" value="otro">
+                            <span>Otro</span>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="campo campo-ancho">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos un poco más..." required></textarea>
+                </div>
+            </div>
+
+            <div class="formulario-pie">
+                <small>Al enviar aceptas nuestra política de privacidad.</small>
+                <button class="boton-enviar" type="submit">Quiero ser voluntario!  <i class="fa-solid fa-person-circle-check"></i></button>
+            </div>
+        </form>
+
+    </div>
+</section>
+
+</main>
+    
+</body>
+</html>
